@@ -1,0 +1,19 @@
+# Terraform
+infra/.terraform/
+infra/.build/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/*.tfvars
+infra/outputs.json
+
+# Downloaded page text (fetched at build time, not redistributed)
+data/pages/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local working files
+*.wav
+.streamlit/

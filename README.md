@@ -1,0 +1,101 @@
+# Campus Assistant on Amazon Bedrock
+
+A small, complete Amazon Bedrock assistant, defined entirely in Terraform:
+
+* a **Knowledge Base** (managed RAG) over a few public university web pages, stored in **S3 Vectors**
+* an **Agent** with an **action group** of two Lambda tools
+* a **Guardrail** for content filtering, PII masking, prompt-attack detection and one denied topic
+* **CloudWatch** invocation logging and a dashboard of latency and token usage per model
+* the same agent built on **two models**, with a script that compares them on cost, speed and quality
+
+> **Status: validated offline, not yet deployed.** `terraform validate` passes against AWS provider 6.x, and the
+> Lambda tools, trace parser and scoring are unit-tested locally. The results tables below are filled in only after a
+> real deployment. Nothing in this repository is a measured result until `results/` contains files.
+
+Unofficial demo. The pages come from the public Curtin University website and are downloaded at build time; they are
+not stored in this repository. Not affiliated with or endorsed by Curtin University. The unit data used by the tools
+(`DEMO1001` and so on) is fictional.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    U[User: CLI or Streamlit] --> AL[Agent alias 'live']
+    subgraph Bedrock
+      AL --> G1[Guardrail: input check]
+      G1 --> M[Agent model<br/>Nova Lite or Claude Haiku 4.5]
+      M -->|search| KB[Knowledge Base]
+      M -->|call tool| AG[Action group]
+      M --> G2[Guardrail: output check]
+    end
+    KB --> EMB[Titan Text Embeddings v2]
+    KB --> VEC[(S3 Vectors index)]
+    DOCS[(S3 bucket: pages)] -->|ingestion job| KB
+    AG --> L[Lambda: get_unit_outline,<br/>create_support_request]
+    G2 --> U
+    M -.tokens, latency.-> CW[CloudWatch logs,<br/>metrics, dashboard]
+```
+
+| Part | Terraform file | What it creates |
+| --- | --- | --- |
+| Knowledge Base | `infra/knowledge_base.tf` | Docs bucket, S3 Vectors bucket and index, IAM role, Knowledge Base, S3 data source (300-token chunks, 20% overlap) |
+| Tools | `infra/lambda.tf`, `lambda/handler.py` | One Lambda with two functions, invocable only by this account's Bedrock agents |
+| Guardrail | `infra/guardrail.tf` | Content filters, prompt-attack filter, PII rules, a student-ID regex, a denied topic, and a numbered version |
+| Agents | `infra/agent.tf` | IAM role, then one agent, Knowledge Base link, action group and alias per model |
+| Observability | `infra/observability.tf` | Invocation logging to CloudWatch Logs and a dashboard |
+
+## Run it
+
+You need an AWS account, [Terraform](https://developer.hashicorp.com/terraform/install) 1.6+, the
+[AWS CLI](https://aws.amazon.com/cli/) and Python 3.10+. Expect a cost of a few US dollars at most if you tear it down
+afterwards: there is no always-on component.
+
+```powershell
+git clone https://github.com/IbrahimUWA/bedrock-campus-assistant
+cd bedrock-campus-assistant
+pip install -r requirements.txt
+aws configure                       # access key, secret, region ap-southeast-2
+
+.\deploy.ps1                        # preflight, terraform apply, fetch pages, index them (about 5 minutes)
+
+python scripts\03_ask.py "When are results released after the mid-year exams?"
+python scripts\03_ask.py --model haiku "What are the assessments for unit DEMO2002?"
+python scripts\04_guardrail_tests.py
+python scripts\05_compare_models.py
+streamlit run scripts\app.py        # chat interface at http://localhost:8501
+
+.\deploy.ps1 -Destroy               # remove everything
+```
+
+The same steps one at a time, with what each does, are in [`STEP_BY_STEP.md`](STEP_BY_STEP.md).
+
+| Step | Script | What it does |
+| --- | --- | --- |
+| 0 | `scripts/00_preflight.py` | Checks credentials, the embedding model, each agent model and S3 Vectors in your region |
+| 1 | `scripts/01_fetch_pages.py` | Downloads the pages in `data/sources.json` as clean text with a source-URL metadata file each |
+| 2 | `scripts/02_ingest.py` | Uploads to S3, runs the ingestion job, then a retrieval check with no LLM |
+| 3 | `scripts/03_ask.py` | Asks the agent; prints searches, tool calls, citations, tokens, latency and cost |
+| 4 | `scripts/04_guardrail_tests.py` | Tests each guardrail rule with `ApplyGuardrail`, then end to end through the agent |
+| 5 | `scripts/05_compare_models.py` | Runs `data/eval_questions.json` through both agents; writes `results/comparison.md`; publishes CloudWatch metrics |
+| - | `scripts/app.py` | Streamlit chat with a panel showing what the agent did |
+
+## Design choices
+
+* **S3 Vectors, not OpenSearch Serverless.** OpenSearch Serverless bills for capacity around the clock. S3 Vectors
+  bills for storage and queries, which suits a small or bursty assistant. The trade-off is fewer search features
+  (no hybrid keyword search).
+* **Sydney region and an Australian inference profile** so prompts and documents stay in Australia.
+* **One agent per model** from a single `for_each`, so adding a third model to compare is one line in `variables.tf`.
+* **Agents attach a numbered guardrail version and are called through an alias**, so a change is a new version that
+  can be rolled back, not an edit in place.
+* **Least privilege.** The agent role may only search this Knowledge Base and apply this guardrail; the Lambda
+  accepts calls only from this account's agents; the docs bucket blocks public access.
+* **Page text is fetched, not committed**, and the fetch honours `robots.txt`.
+
+## Results
+
+Filled in after deployment: `results/comparison.md` and `results/guardrail_tests.md`.
+
+## Licence
+
+MIT for the code. The downloaded page content remains the property of its publisher.

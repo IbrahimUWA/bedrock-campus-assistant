@@ -1,0 +1,36 @@
+{
+  "_note": "Fictional sample data for the demo. Not real university units.",
+  "DEMO1001": {
+    "title": "Introduction to Data Science",
+    "credits": 25,
+    "study_periods": ["Semester 1", "Semester 2"],
+    "prerequisites": [],
+    "assessments": [
+      {"name": "Weekly quizzes", "weight": "20%"},
+      {"name": "Data analysis report", "weight": "40%"},
+      {"name": "Final exam", "weight": "40%"}
+    ]
+  },
+  "DEMO2002": {
+    "title": "Machine Learning Foundations",
+    "credits": 25,
+    "study_periods": ["Semester 2"],
+    "prerequisites": ["DEMO1001"],
+    "assessments": [
+      {"name": "Programming assignment", "weight": "30%"},
+      {"name": "Group project", "weight": "30%"},
+      {"name": "Final exam", "weight": "40%"}
+    ]
+  },
+  "DEMO3003": {
+    "title": "Generative AI Engineering",
+    "credits": 25,
+    "study_periods": ["Semester 1"],
+    "prerequisites": ["DEMO2002"],
+    "assessments": [
+      {"name": "RAG system build", "weight": "50%"},
+      {"name": "Evaluation report", "weight": "25%"},
+      {"name": "Presentation", "weight": "25%"}
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_note": "On-demand prices in USD per million tokens, entered by hand. Prices vary by region and change over time: check https://aws.amazon.com/bedrock/pricing/ and edit before quoting any cost figure.",
+  "usd_per_million_tokens": {
+    "nova-lite": {"input": 0.06, "output": 0.24},
+    "nova-micro": {"input": 0.035, "output": 0.14},
+    "nova-pro": {"input": 0.80, "output": 3.20},
+    "claude-haiku-4-5": {"input": 1.00, "output": 5.00},
+    "claude-sonnet-4-5": {"input": 3.00, "output": 15.00}
+  }
+}

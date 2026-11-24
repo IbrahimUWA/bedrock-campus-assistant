@@ -1,0 +1,15 @@
+{
+  "_note": "expect: every listed string must appear in the answer (case-insensitive; a list inside the list means any one of them). kind: kb = answer is in the pages, tool = needs an action group call, abstain = not in the pages, so the right answer is to say so.",
+  "questions": [
+    {"id": "q01", "kind": "kb", "question": "When are results released after the mid-year exam period?", "expect": ["30 June"]},
+    {"id": "q02", "kind": "kb", "question": "When is the centrally scheduled exam period in November?", "expect": ["13 November"]},
+    {"id": "q03", "kind": "kb", "question": "What is the last date to apply for alternative exam arrangements for the mid-year exams?", "expect": ["16 April"]},
+    {"id": "q04", "kind": "kb", "question": "How can I pay my fees online?", "expect": ["ePay"]},
+    {"id": "q05", "kind": "kb", "question": "Which world ranking places Curtin in the top one per cent of universities?", "expect": [["ARWU", "Academic Ranking of World Universities"]]},
+    {"id": "q06", "kind": "kb", "question": "Which Curtin library is open by appointment only?", "expect": ["John Curtin Prime Ministerial"]},
+    {"id": "q07", "kind": "kb", "question": "What phone number do I call to reach the Safer Community Team?", "expect": [["9266 4444", "92664444"]]},
+    {"id": "q08", "kind": "tool", "question": "What are the assessments for unit DEMO2002?", "expect": ["Group project", "40%"], "tool": "get_unit_outline"},
+    {"id": "q09", "kind": "tool", "question": "What do I need to have completed before I can take DEMO3003?", "expect": ["DEMO2002"], "tool": "get_unit_outline"},
+    {"id": "q10", "kind": "abstain", "question": "How much does parking cost per hour at the Bentley campus?", "expect": [["don't know", "do not know", "don't have", "do not have", "not able to find", "couldn't find", "could not find", "no information", "not available", "unable to find", "not contain", "doesn't contain", "does not contain"]]}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_note": "Public pages loaded into the Knowledge Base. The page text is downloaded at build time and is not stored in this repository.",
+  "pages": [
+    "https://www.curtin.edu.au/about/",
+    "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+    "https://www.curtin.edu.au/study/applying/domestic/how-to-apply/",
+    "https://www.curtin.edu.au/students/essentials/fees/",
+    "https://www.curtin.edu.au/library/",
+    "https://www.curtin.edu.au/students/personal-support/"
+  ]
+}
