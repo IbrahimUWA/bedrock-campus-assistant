@@ -98,12 +98,6 @@ resource "time_sleep" "iam" {
   ]
 }
 
-# The agent policy refers to the knowledge base, so it gets its own wait.
-resource "time_sleep" "iam_agent" {
-  create_duration = "20s"
-  depends_on      = [aws_iam_role_policy.agent]
-}
-
 # ---------- Knowledge Base ----------
 
 resource "aws_bedrockagent_knowledge_base" "main" {

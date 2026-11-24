@@ -39,13 +39,3 @@ resource "aws_lambda_function" "tools" {
   timeout          = 10
   depends_on       = [aws_cloudwatch_log_group.tools]
 }
-
-# Only this account's Bedrock agents may invoke the function.
-resource "aws_lambda_permission" "bedrock" {
-  statement_id   = "AllowBedrockAgents"
-  action         = "lambda:InvokeFunction"
-  function_name  = aws_lambda_function.tools.function_name
-  principal      = "bedrock.amazonaws.com"
-  source_account = local.account
-  source_arn     = "arn:${data.aws_partition.now.partition}:bedrock:${var.region}:${local.account}:agent/*"
-}

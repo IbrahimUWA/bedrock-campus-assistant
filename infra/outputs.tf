@@ -22,15 +22,13 @@ output "guardrail_version" {
   value = aws_bedrock_guardrail_version.v1.version
 }
 
-output "agents" {
-  description = "Per model key: the model, agent id and alias id."
-  value = {
-    for k, v in var.agent_models : k => {
-      model    = v
-      agent_id = aws_bedrockagent_agent.this[k].agent_id
-      alias_id = aws_bedrockagent_agent_alias.live[k].agent_alias_id
-    }
-  }
+output "models" {
+  description = "Model key to model ID, one per model being compared."
+  value       = var.agent_models
+}
+
+output "agent_runtime_policy_arn" {
+  value = aws_iam_policy.agent_runtime.arn
 }
 
 output "invocation_log_group" {

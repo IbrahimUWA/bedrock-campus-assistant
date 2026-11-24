@@ -5,8 +5,6 @@
 Pick a model in the sidebar. Under each answer, "What the agent did" shows
 the searches, tool calls, guardrail action, sources, tokens, latency and cost.
 """
-import uuid
-
 import streamlit as st
 
 from common import ask, outputs
@@ -25,12 +23,12 @@ EXAMPLES = [
 
 with st.sidebar:
     st.header("Campus Assistant")
-    st.caption("Amazon Bedrock Agent + Knowledge Base + Guardrails. Unofficial demo over a few public "
+    st.caption("Agent on Amazon Bedrock: Converse API tool loop + Knowledge Base + Guardrails. Unofficial demo over a few public "
                "university pages; unit data is fictional.")
-    key = st.radio("Model", list(out["agents"]), format_func=lambda k: f"{k}  ({out['agents'][k]['model']})")
+    key = st.radio("Model", list(out["models"]), format_func=lambda k: f"{k}  ({out['models'][k]})")
     if st.button("New conversation"):
         st.session_state.pop("messages", None)
-        st.session_state["session"] = uuid.uuid4().hex
+        st.session_state.pop("history", None)
     st.divider()
     st.caption("Try one")
     picked = next((e for e in EXAMPLES if st.button(e, use_container_width=True)), None)
@@ -39,7 +37,7 @@ with st.sidebar:
     st.link_button("CloudWatch dashboard", out["dashboard_url"])
 
 st.session_state.setdefault("messages", [])
-st.session_state.setdefault("session", uuid.uuid4().hex)
+st.session_state.setdefault("history", [])
 
 
 def details(r: dict) -> None:
@@ -50,13 +48,13 @@ def details(r: dict) -> None:
     cols[2].metric("Model calls", r["model_calls"])
     cols[3].metric("Cost", cost)
     with st.expander("What the agent did"):
-        if r["guardrail"] == "INTERVENED":
-            st.warning("Guardrail intervened")
+        if r["guardrail_policies"]:
+            st.warning(f"Guardrail {r['guardrail'].lower()}: {', '.join(r['guardrail_policies'])}")
         for q in r["searches"]:
             st.markdown(f"**Knowledge base search:** {q}")
         for t in r["tool_calls"]:
             st.markdown(f"**Tool call:** `{t['function']}` {t['parameters']}")
-        if not (r["searches"] or r["tool_calls"] or r["guardrail"] == "INTERVENED"):
+        if not (r["searches"] or r["tool_calls"] or r["guardrail_policies"]):
             st.caption("Answered without a search or tool call.")
         for i, c in enumerate(r["citations"], 1):
             st.markdown(f"[{i}] [{c['title'] or c['url']}]({c['url']})")
@@ -78,7 +76,8 @@ if question:
         st.markdown(question)
     with st.chat_message("assistant"):
         with st.spinner(f"Asking {key}..."):
-            r = ask(key, question, st.session_state["session"])
+            r = ask(key, question, st.session_state["history"])
+        st.session_state["history"] = r.pop("messages")
         text = r["answer"].strip() or f"(no answer) {r['error'] or ''}"
         st.markdown(text)
         details(r)

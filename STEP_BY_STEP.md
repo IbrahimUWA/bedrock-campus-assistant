@@ -41,7 +41,7 @@ what it teaches about Bedrock.
 ```powershell
 cd infra
 terraform init
-terraform plan            # read this: about 30 resources
+terraform plan            # read this: about 20 resources
 terraform apply
 terraform output -json | Set-Content -Encoding utf8 outputs.json
 cd ..
@@ -54,7 +54,8 @@ What gets built, in dependency order:
 3. The Knowledge Base and its S3 data source.
 4. The Lambda function with the two tools.
 5. The guardrail and version 1 of it.
-6. For each model: agent, Knowledge Base link, action group, then the `live` alias.
+6. A least-privilege IAM policy for the agent loop. The agent itself is code, `agent/core.py`: Bedrock Agents is
+   closed to new accounts (see the README).
 7. The invocation log group, logging configuration and dashboard.
 
 `.\deploy.ps1` runs steps 0 to 3 in one go.
@@ -82,7 +83,7 @@ python scripts\03_ask.py --model haiku "When is the November exam period?"
 
 Read the lines above each answer:
 
-* `[search]` means the agent chose to query the Knowledge Base, and shows the query it wrote.
+* `[search]` means the model chose to query the Knowledge Base, and shows the query it wrote.
 * `[tool]` means it called a Lambda function, and shows the parameters it extracted.
 * The numbered links are the citations.
 * The last line is the model, total latency, tokens across every model call in the loop, and cost.
@@ -105,7 +106,7 @@ then sends three of the cases through the agent. Results land in `results\guardr
 python scripts\05_compare_models.py --repeats 3
 ```
 
-Ten questions go through both agents: seven answered from the pages, two that need a tool, one that cannot be
+Ten questions go through the agent on each model: seven answered from the pages, two that need a tool, one that cannot be
 answered. The script records latency, tokens and cost, checks each answer for the expected facts, writes
 `results\comparison.md`, and publishes the numbers to CloudWatch under the `CampusAssistant` namespace.
 
@@ -129,10 +130,11 @@ deliberately whether prompt text should be logged.
 streamlit run scripts\app.py
 ```
 
-## 8. Change something and redeploy
+## 8. Change something and rerun
 
-Edit the agent instruction in `infra\agent.tf` or a guardrail rule in `infra\guardrail.tf`, then `terraform apply`.
-Note that the `live` alias points at a frozen agent version: a changed draft is not served until the alias is updated.
+Edit the system prompt or a tool description in `agent\core.py` and rerun step 5: the question set is your regression
+test. Edit a guardrail rule in `infra\guardrail.tf` and run `terraform apply`; the agent keeps using the numbered
+version until you publish a new one.
 
 ## 9. Tear down
 

@@ -7,7 +7,7 @@ Writes results/guardrail_tests.md and .json.
 import json
 import sys
 
-from common import RESULTS, ask, client, outputs
+from common import RESULTS, ask, client, core, outputs
 
 # (name, where the text is checked, text, expected action)
 CASES = [
@@ -37,16 +37,7 @@ def classify(resp: dict, original: str) -> tuple[str, str]:
 
 def triggered(assessments: list) -> str:
     """Short list of which policies fired."""
-    hits = []
-    for a in assessments:
-        for f in a.get("contentPolicy", {}).get("filters", []):
-            hits.append(f"content:{f['type']}")
-        for t in a.get("topicPolicy", {}).get("topics", []):
-            hits.append(f"topic:{t['name']}")
-        s = a.get("sensitiveInformationPolicy", {})
-        hits += [f"pii:{p['type']}" for p in s.get("piiEntities", [])]
-        hits += [f"regex:{p['name']}" for p in s.get("regexes", [])]
-    return ", ".join(dict.fromkeys(hits)) or "-"
+    return ", ".join(core.fired_policies(assessments)) or "-"
 
 
 def main() -> int:
@@ -65,12 +56,12 @@ def main() -> int:
         print(f"{'PASS' if actual == expected else 'FAIL'}  {name:<34} expected {expected:<8} got {actual:<8} {rows[-1]['policies']}")
 
     # The same policy, end to end through an agent.
-    key = list(out["agents"])[0]
+    key = list(out["models"])[0]
     e2e = []
     for name, question in [("Prompt injection via agent", CASES[1][2]), ("Ghostwriting via agent", CASES[2][2]),
                            ("PII via agent", CASES[5][2])]:
         r = ask(key, question)
-        e2e.append({"case": name, "question": question, "guardrail": r["guardrail"], "answer": r["answer"].strip(),
+        e2e.append({"case": name, "question": question, "guardrail": r["guardrail"], "policies": ", ".join(r["guardrail_policies"]) or "-", "answer": r["answer"].strip(),
                     "model_calls": r["model_calls"], "error": r["error"]})
         print(f"e2e   {name:<34} guardrail={r['guardrail']:<10} model calls={r['model_calls']}  {r['answer'].strip()[:70]!r}")
 
@@ -79,8 +70,8 @@ def main() -> int:
     md = ["# Guardrail tests", "", f"{sum(r['pass'] for r in rows)} of {len(rows)} direct cases behaved as expected.", "",
           "| Case | Checked on | Expected | Actual | Policies that fired | Text after the guardrail |", "| --- | --- | --- | --- | --- | --- |"]
     md += [f"| {r['case']} | {r['source'].lower()} | {r['expected']} | {r['actual']} | {r['policies']} | {r['result_text'][:120]} |" for r in rows]
-    md += ["", f"## Through the agent ({key})", "", "| Case | Guardrail | Model calls | Reply |", "| --- | --- | --- | --- |"]
-    md += [f"| {r['case']} | {r['guardrail']} | {r['model_calls']} | {(r['answer'] or r['error'] or '')[:160]} |" for r in e2e]
+    md += ["", f"## Through the agent ({key})", "", "| Case | Guardrail | Policies that fired | Model calls | Reply |", "| --- | --- | --- | --- | --- |"]
+    md += [f"| {r['case']} | {r['guardrail']} | {r['policies']} | {r['model_calls']} | {(r['answer'] or r['error'] or '')[:160]} |" for r in e2e]
     (RESULTS / "guardrail_tests.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print(f"\nwrote {RESULTS / 'guardrail_tests.md'}")
     return 0

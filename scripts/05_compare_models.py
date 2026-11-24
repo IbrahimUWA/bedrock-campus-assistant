@@ -42,7 +42,7 @@ def main() -> int:
     questions = json.loads((ROOT / "data" / "eval_questions.json").read_text(encoding="utf-8"))["questions"]
     cw = client("cloudwatch")
     runs = []
-    for key in out["agents"]:
+    for key in out["models"]:
         for q in questions:
             for _ in range(args.repeats):
                 r = ask(key, q["question"])
@@ -62,13 +62,13 @@ def main() -> int:
                 time.sleep(1)  # stay under on-demand rate limits
 
     summary = {}
-    for key, agent in out["agents"].items():
+    for key, model_id in out["models"].items():
         mine = [r for r in runs if r["model_key"] == key]
         good = [r for r in mine if not r["error"]]
         lat = sorted(r["latency_s"] for r in good)
         costs = [r["cost_usd"] for r in good if r["cost_usd"] is not None]
         summary[key] = {
-            "model": agent["model"], "runs": len(mine), "errors": len(mine) - len(good),
+            "model": model_id, "runs": len(mine), "errors": len(mine) - len(good),
             "passed": sum(r["passed"] for r in mine),
             "by_kind": {k: f"{sum(r['passed'] for r in mine if r['kind'] == k)}/{sum(1 for r in mine if r['kind'] == k)}"
                         for k in ("kb", "tool", "abstain")},
@@ -81,9 +81,9 @@ def main() -> int:
         }
 
     RESULTS.mkdir(exist_ok=True)
-    (RESULTS / "comparison.json").write_text(json.dumps({"summary": summary, "runs": runs}, indent=2, default=str), encoding="utf-8")
+    (RESULTS / "comparison.json").write_text(json.dumps({"summary": summary, "runs": [{k: v for k, v in r.items() if k != "messages"} for r in runs]}, indent=2, default=str), encoding="utf-8")
     md = ["# Model comparison", "",
-          f"{len(questions)} questions, {args.repeats} run(s) each, through the full agent (guardrail, knowledge base, tools).",
+          f"{len(questions)} questions, {args.repeats} run(s) each, through the full agent loop (guardrail, knowledge base, tools).",
           "Costs use the hand-entered table in `data/prices.json`; check it against the AWS pricing page.", "",
           "| | " + " | ".join(summary) + " |", "| --- |" + " --- |" * len(summary)]
     rows = [("Model", "model"), ("Questions passed", None), ("Knowledge base questions", "kb"), ("Tool questions", "tool"),

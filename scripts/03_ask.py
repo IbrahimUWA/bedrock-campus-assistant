@@ -2,11 +2,10 @@
 
     python scripts/03_ask.py "When are exam results released?"
     python scripts/03_ask.py --model haiku "What are the assessments for DEMO2002?"
-    python scripts/03_ask.py            (interactive; the session keeps context)
+    python scripts/03_ask.py            (interactive; the conversation keeps context)
 """
 import argparse
 import sys
-import uuid
 
 from common import ask, outputs
 
@@ -16,8 +15,8 @@ def show(r: dict) -> None:
         print(f"  [search]    {q}")
     for t in r["tool_calls"]:
         print(f"  [tool]      {t['function']}({t['parameters']})")
-    if r["guardrail"] == "INTERVENED":
-        print("  [guardrail] intervened")
+    if r["guardrail_policies"]:
+        print(f"  [guardrail] {r['guardrail'].lower()}: {', '.join(r['guardrail_policies'])}")
     if r["error"]:
         print(f"  [error]     {r['error']}")
     print(f"\n{r['answer'].strip()}\n")
@@ -30,21 +29,23 @@ def show(r: dict) -> None:
 
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
-    keys = list(outputs()["agents"])
+    keys = list(outputs()["models"])
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="?")
-    ap.add_argument("--model", choices=keys, default=keys[0])
+    ap.add_argument("--model", choices=keys, default="nova" if "nova" in keys else keys[0])
     args = ap.parse_args()
     if args.question:
         show(ask(args.model, args.question))
         return
-    session = uuid.uuid4().hex
+    history = []
     print(f"Campus assistant on '{args.model}'. Empty line to quit.")
     while True:
         q = input("> ").strip()
         if not q:
             break
-        show(ask(args.model, q, session))
+        r = ask(args.model, q, history)
+        history = r["messages"]
+        show(r)
 
 
 if __name__ == "__main__":

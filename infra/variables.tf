@@ -21,7 +21,7 @@ variable "embedding_dimensions" {
 }
 
 variable "agent_models" {
-  description = "One agent is built per entry so the same questions can be compared across models. Values are model IDs or inference profile IDs available in the region (check with scripts/00_preflight.py)."
+  description = "The agent can run on any entry, so the same questions can be compared across models. Values are model IDs or inference profile IDs available in the region (check with scripts/00_preflight.py)."
   type        = map(string)
   default = {
     nova  = "apac.amazon.nova-lite-v1:0"
