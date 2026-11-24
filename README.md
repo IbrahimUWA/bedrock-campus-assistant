@@ -9,9 +9,10 @@ A small, complete Amazon Bedrock assistant, defined entirely in Terraform:
 * the same agent run on **two models**, with a script that compares them on cost, speed and quality
 
 > **Status: infrastructure deployed; model calls not yet run.** The Terraform stack is live in a new AWS account
-> (Knowledge Base, S3 Vectors index, guardrail, Lambda, logging, dashboard) and the Lambda tools answer. The account's
-> Bedrock model quota is still zero while AWS finishes verifying it, so ingestion, the agent and the comparison have
-> not run. Nothing here is a measured result until `results/` contains files.
+> (Knowledge Base, S3 Vectors index, guardrail, Lambda, logging, dashboard) and the Lambda tools answer. The agent
+> loop passes its offline tests (`python tests/test_agent_offline.py`, fake model). The account's Bedrock quotas are
+> all 0 (a new-account restriction; a support case is open), so ingestion, the agent and the comparison have not run
+> against a real model. Nothing here is a measured result until `results/` contains files.
 
 Unofficial demo. The pages come from the public Curtin University website and are downloaded at build time; they are
 not stored in this repository. Not affiliated with or endorsed by Curtin University. The unit data used by the tools
