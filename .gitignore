@@ -17,3 +17,6 @@ __pycache__/
 # Local working files
 *.wav
 .streamlit/
+
+# Walkthrough video (kept locally; too large for the repository)
+docs/*.mp4
