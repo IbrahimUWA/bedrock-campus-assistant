@@ -7,7 +7,7 @@ the searches, tool calls, guardrail action, sources, tokens, latency and cost.
 """
 import streamlit as st
 
-from common import ask, outputs
+from common import LOCAL, ask, outputs
 
 st.set_page_config(page_title="Campus Assistant on Amazon Bedrock", layout="wide")
 out = outputs()
@@ -35,6 +35,9 @@ with st.sidebar:
     st.divider()
     st.caption(f"Region {out['region']}  |  Knowledge base {out['knowledge_base_id']}  |  Guardrail v{out['guardrail_version']}")
     st.link_button("CloudWatch dashboard", out["dashboard_url"])
+    if LOCAL:
+        st.warning("Local stand-in mode: the model and the page search run on this machine. "
+                   "The guardrail and the tools are the deployed AWS resources.")
 
 st.session_state.setdefault("messages", [])
 st.session_state.setdefault("history", [])

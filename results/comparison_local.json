@@ -1,0 +1,1834 @@
+{
+  "summary": {
+    "qwen3-8b": {
+      "model": "local/Qwen3-8B",
+      "runs": 30,
+      "errors": 0,
+      "passed": 24,
+      "by_kind": {
+        "kb": "15/21",
+        "tool": "6/6",
+        "abstain": "3/3"
+      },
+      "latency_median_s": 2.79,
+      "latency_max_s": 15.68,
+      "input_tokens_mean": 1688,
+      "output_tokens_mean": 71,
+      "cost_per_question_usd": null,
+      "cost_per_1000_questions_usd": null
+    },
+    "qwen3-14b": {
+      "model": "local/Qwen3-14B",
+      "runs": 30,
+      "errors": 0,
+      "passed": 21,
+      "by_kind": {
+        "kb": "12/21",
+        "tool": "6/6",
+        "abstain": "3/3"
+      },
+      "latency_median_s": 3.35,
+      "latency_max_s": 19.76,
+      "input_tokens_mean": 1419,
+      "output_tokens_mean": 64,
+      "cost_per_question_usd": null,
+      "cost_per_1000_questions_usd": null
+    }
+  },
+  "runs": [
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released on the following dates after the mid-year exam period:\n\n- **30 December 2026** for the Open Unis Study Period 3 2026.\n- **31 March 2027** for the Open Unis Session 3 2026.\n- **TBA (To Be Announced)** for the Open Unis Study Period 1 2027.\n- **14 July 2027** for the Open Unis Session 1 2027.\n\nYou can access your results via eStudent in OASIS. For the most accurate and up-to-date information, check the official university website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.615
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results released after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1826,
+      "output_tokens": 174,
+      "model_calls": 2,
+      "model_latency_ms": 7371,
+      "error": null,
+      "latency_s": 15.68,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released on the following dates after the mid-year exam period:\n\n- **30 December 2026** for the Open Unis Study Period 3 2026.\n- **31 March 2027** for the Open Unis Session 3 2026.\n- **TBA (To Be Announced)** for the Open Unis Study Period 1 2027.\n- **14 July 2027** for the Open Unis Session 1 2027.\n\nYou can access your results via eStudent in OASIS. For the most accurate and up-to-date information, check the official university website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.615
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results released after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1826,
+      "output_tokens": 174,
+      "model_calls": 2,
+      "model_latency_ms": 6612,
+      "error": null,
+      "latency_s": 6.62,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released on the following dates after the mid-year exam period:\n\n- **30 December 2026** for the Open Unis Study Period 3 2026.\n- **31 March 2027** for the Open Unis Session 3 2026.\n- **TBA (To Be Announced)** for the Open Unis Study Period 1 2027.\n- **14 July 2027** for the Open Unis Session 1 2027.\n\nYou can access your results via eStudent in OASIS. For the most accurate and up-to-date information, check the official university website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.615
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results released after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1826,
+      "output_tokens": 174,
+      "model_calls": 2,
+      "model_latency_ms": 6616,
+      "error": null,
+      "latency_s": 6.62,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from 30 November to 4 December.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n# Key centrally scheduled exam dates\n\nKey dates are available below for centrally scheduled periods (including Further and Deferred Exams):",
+          "score": 0.704
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1836,
+      "output_tokens": 48,
+      "model_calls": 2,
+      "model_latency_ms": 2268,
+      "error": null,
+      "latency_s": 2.27,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from 30 November to 4 December.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n# Key centrally scheduled exam dates\n\nKey dates are available below for centrally scheduled periods (including Further and Deferred Exams):",
+          "score": 0.704
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1836,
+      "output_tokens": 48,
+      "model_calls": 2,
+      "model_latency_ms": 2278,
+      "error": null,
+      "latency_s": 2.28,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from 30 November to 4 December.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n# Key centrally scheduled exam dates\n\nKey dates are available below for centrally scheduled periods (including Further and Deferred Exams):",
+          "score": 0.704
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1836,
+      "output_tokens": 48,
+      "model_calls": 2,
+      "model_latency_ms": 2261,
+      "error": null,
+      "latency_s": 2.27,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is 16 April.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.685
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements in Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2116,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 2866,
+      "error": null,
+      "latency_s": 2.87,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is 16 April.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.685
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements in Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2116,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 2855,
+      "error": null,
+      "latency_s": 2.86,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is 16 April.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.685
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements in Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2116,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 2859,
+      "error": null,
+      "latency_s": 2.87,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using the Curtin ePay portal. Visit the [Curtin ePay page](https://www.curtin.edu.au/students/essentials/fees/) for more details.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Curtin ePay\n\nPay your fees using our quick and secure online payment portal, Curtin ePay.\n- Go to Curtin ePay",
+          "score": 0.714
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "How to pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1511,
+      "output_tokens": 72,
+      "model_calls": 2,
+      "model_latency_ms": 3364,
+      "error": null,
+      "latency_s": 3.37,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using the Curtin ePay portal. Visit the [Curtin ePay page](https://www.curtin.edu.au/students/essentials/fees/) for more details.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Curtin ePay\n\nPay your fees using our quick and secure online payment portal, Curtin ePay.\n- Go to Curtin ePay",
+          "score": 0.714
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "How to pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1511,
+      "output_tokens": 72,
+      "model_calls": 2,
+      "model_latency_ms": 3133,
+      "error": null,
+      "latency_s": 3.14,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using the Curtin ePay portal. Visit the [Curtin ePay page](https://www.curtin.edu.au/students/essentials/fees/) for more details.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Curtin ePay\n\nPay your fees using our quick and secure online payment portal, Curtin ePay.\n- Go to Curtin ePay",
+          "score": 0.714
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "How to pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1511,
+      "output_tokens": 72,
+      "model_calls": 2,
+      "model_latency_ms": 2980,
+      "error": null,
+      "latency_s": 2.99,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which world ranking places Curtin in the top one per cent of universities?",
+      "answer": "Curtin University is ranked in the top one per cent of universities worldwide according to the Academic Ranking of World Universities (ARWU) 2026.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Top one per cent\n\nWith Curtin ranked in the top one per cent of universities worldwide in the highly regarded Academic Ranking of World Universities (ARWU) 2026, you\u2019ll experience high-quality teaching alo",
+          "score": 0.788
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin world ranking top one per cent"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1551,
+      "output_tokens": 65,
+      "model_calls": 2,
+      "model_latency_ms": 2752,
+      "error": null,
+      "latency_s": 2.76,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which world ranking places Curtin in the top one per cent of universities?",
+      "answer": "Curtin University is ranked in the top one per cent of universities worldwide according to the Academic Ranking of World Universities (ARWU) 2026.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Top one per cent\n\nWith Curtin ranked in the top one per cent of universities worldwide in the highly regarded Academic Ranking of World Universities (ARWU) 2026, you\u2019ll experience high-quality teaching alo",
+          "score": 0.788
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin world ranking top one per cent"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1551,
+      "output_tokens": 65,
+      "model_calls": 2,
+      "model_latency_ms": 2778,
+      "error": null,
+      "latency_s": 2.78,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which world ranking places Curtin in the top one per cent of universities?",
+      "answer": "Curtin University is ranked in the top one per cent of universities worldwide according to the Academic Ranking of World Universities (ARWU) 2026.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Top one per cent\n\nWith Curtin ranked in the top one per cent of universities worldwide in the highly regarded Academic Ranking of World Universities (ARWU) 2026, you\u2019ll experience high-quality teaching alo",
+          "score": 0.788
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin world ranking top one per cent"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1551,
+      "output_tokens": 65,
+      "model_calls": 2,
+      "model_latency_ms": 2896,
+      "error": null,
+      "latency_s": 2.9,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which Curtin library is open by appointment only?",
+      "answer": "The John Curtin Prime Ministerial Library is open by appointment only. You can find out more details on the Curtin University library website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/library/",
+          "title": "Library | Curtin University, Perth, Australia",
+          "snippet": "[Library | Curtin University, Perth, Australia]\n## John Curtin Prime Ministerial Library\n\nOpen by appointment.\n- Find out more",
+          "score": 0.735
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1447,
+      "output_tokens": 58,
+      "model_calls": 2,
+      "model_latency_ms": 2506,
+      "error": null,
+      "latency_s": 2.51,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which Curtin library is open by appointment only?",
+      "answer": "The John Curtin Prime Ministerial Library is open by appointment only. You can find out more details on the Curtin University library website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/library/",
+          "title": "Library | Curtin University, Perth, Australia",
+          "snippet": "[Library | Curtin University, Perth, Australia]\n## John Curtin Prime Ministerial Library\n\nOpen by appointment.\n- Find out more",
+          "score": 0.735
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1447,
+      "output_tokens": 58,
+      "model_calls": 2,
+      "model_latency_ms": 2480,
+      "error": null,
+      "latency_s": 2.49,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which Curtin library is open by appointment only?",
+      "answer": "The John Curtin Prime Ministerial Library is open by appointment only. You can find out more details on the Curtin University library website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/library/",
+          "title": "Library | Curtin University, Perth, Australia",
+          "snippet": "[Library | Curtin University, Perth, Australia]\n## John Curtin Prime Ministerial Library\n\nOpen by appointment.\n- Find out more",
+          "score": 0.735
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1447,
+      "output_tokens": 58,
+      "model_calls": 2,
+      "model_latency_ms": 2635,
+      "error": null,
+      "latency_s": 2.64,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What phone number do I call to reach the Safer Community Team?",
+      "answer": "The phone number for the Safer Community Team is 08 9266 4444. You can call them for assistance with safety or security concerns.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/personal-support/",
+          "title": "Personal support | Current Students",
+          "snippet": "# Personal support | Current Students\n\nSource: https://www.curtin.edu.au/students/personal-support/\n\nIf you have concerns about the safety, security, or wellbeing of yourself or others, you can choose to report an incident online , call our",
+          "score": 0.663
+        },
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Need help?\n\nIf you can\u2019t find what you need on our website, please contact us.\n- Contact Curtin Connect",
+          "score": 0.449
+        },
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Community engagement\n\nOur diverse range of initiatives and programs have created strong ties to the local and wider community. If you\u2019re a community member or organisation, see how you can get involved wit",
+          "score": 0.41
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Safer Community Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1601,
+      "output_tokens": 64,
+      "model_calls": 2,
+      "model_latency_ms": 2787,
+      "error": null,
+      "latency_s": 2.79,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What phone number do I call to reach the Safer Community Team?",
+      "answer": "The phone number for the Safer Community Team is 08 9266 4444. You can call them for assistance with safety or security concerns.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/personal-support/",
+          "title": "Personal support | Current Students",
+          "snippet": "# Personal support | Current Students\n\nSource: https://www.curtin.edu.au/students/personal-support/\n\nIf you have concerns about the safety, security, or wellbeing of yourself or others, you can choose to report an incident online , call our",
+          "score": 0.663
+        },
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Need help?\n\nIf you can\u2019t find what you need on our website, please contact us.\n- Contact Curtin Connect",
+          "score": 0.449
+        },
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Community engagement\n\nOur diverse range of initiatives and programs have created strong ties to the local and wider community. If you\u2019re a community member or organisation, see how you can get involved wit",
+          "score": 0.41
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Safer Community Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1601,
+      "output_tokens": 64,
+      "model_calls": 2,
+      "model_latency_ms": 2729,
+      "error": null,
+      "latency_s": 2.73,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What phone number do I call to reach the Safer Community Team?",
+      "answer": "The phone number for the Safer Community Team is 08 9266 4444. You can call them for assistance with safety or security concerns.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/personal-support/",
+          "title": "Personal support | Current Students",
+          "snippet": "# Personal support | Current Students\n\nSource: https://www.curtin.edu.au/students/personal-support/\n\nIf you have concerns about the safety, security, or wellbeing of yourself or others, you can choose to report an incident online , call our",
+          "score": 0.663
+        },
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Need help?\n\nIf you can\u2019t find what you need on our website, please contact us.\n- Contact Curtin Connect",
+          "score": 0.449
+        },
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Community engagement\n\nOur diverse range of initiatives and programs have created strong ties to the local and wider community. If you\u2019re a community member or organisation, see how you can get involved wit",
+          "score": 0.41
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Safer Community Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1601,
+      "output_tokens": 64,
+      "model_calls": 2,
+      "model_latency_ms": 2818,
+      "error": null,
+      "latency_s": 2.82,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 are:\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 2682,
+      "error": null,
+      "latency_s": 3.44,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 are:\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 2804,
+      "error": null,
+      "latency_s": 2.9,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 are:\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 2709,
+      "error": null,
+      "latency_s": 2.79,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "You need to have completed DEMO2002 before you can take DEMO3003.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 50,
+      "model_calls": 2,
+      "model_latency_ms": 2261,
+      "error": null,
+      "latency_s": 2.34,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "You need to have completed DEMO2002 before you can take DEMO3003.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 50,
+      "model_calls": 2,
+      "model_latency_ms": 2368,
+      "error": null,
+      "latency_s": 2.45,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "You need to have completed DEMO2002 before you can take DEMO3003.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 50,
+      "model_calls": 2,
+      "model_latency_ms": 2305,
+      "error": null,
+      "latency_s": 2.39,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How much does parking cost per hour at the Bentley campus?",
+      "answer": "The search results do not provide information about parking costs per hour at the Bentley campus. For more details, please contact student services.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Semester 2 2026\n\n18 September | Publication of Draft Timetable | Access your personalised draft timetable\n25 September | Draft timetable \u2013 close of feedback | Submit feedback to you",
+          "score": 0.582
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "parking cost per hour at Bentley campus"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2319,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2661,
+      "error": null,
+      "latency_s": 2.67,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How much does parking cost per hour at the Bentley campus?",
+      "answer": "The search results do not provide information about parking costs per hour at the Bentley campus. For more details, please contact student services.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Semester 2 2026\n\n18 September | Publication of Draft Timetable | Access your personalised draft timetable\n25 September | Draft timetable \u2013 close of feedback | Submit feedback to you",
+          "score": 0.582
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "parking cost per hour at Bentley campus"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2319,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2693,
+      "error": null,
+      "latency_s": 2.7,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How much does parking cost per hour at the Bentley campus?",
+      "answer": "The search results do not provide information about parking costs per hour at the Bentley campus. For more details, please contact student services.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Semester 2 2026\n\n18 September | Publication of Draft Timetable | Access your personalised draft timetable\n25 September | Draft timetable \u2013 close of feedback | Submit feedback to you",
+          "score": 0.582
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "parking cost per hour at Bentley campus"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2319,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2602,
+      "error": null,
+      "latency_s": 2.61,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released approximately one month after the centrally scheduled exam period. For example, if exams are held in June, results are usually released in July. For precise dates, check the academic calendar or the specific session details on the university's website. You can access your results via eStudent in OASIS.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.632
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results release after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1826,
+      "output_tokens": 92,
+      "model_calls": 2,
+      "model_latency_ms": 4788,
+      "error": null,
+      "latency_s": 19.76,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released approximately one month after the centrally scheduled exam period. For example, if exams are held in June, results are usually released in July. For precise dates, check the academic calendar or the specific session details on the university's website. You can access your results via eStudent in OASIS.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.632
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results release after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1826,
+      "output_tokens": 92,
+      "model_calls": 2,
+      "model_latency_ms": 4517,
+      "error": null,
+      "latency_s": 4.52,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released approximately one month after the centrally scheduled exam period. For example, if exams are held in June, results are usually released in July. For precise dates, check the academic calendar or the specific session details on the university's website. You can access your results via eStudent in OASIS.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.632
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results release after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1826,
+      "output_tokens": 92,
+      "model_calls": 2,
+      "model_latency_ms": 4470,
+      "error": null,
+      "latency_s": 4.48,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from **30 November to 4 December**. You can find more details on the academic calendar.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n# Key centrally scheduled exam dates\n\nKey dates are available below for centrally scheduled periods (including Further and Deferred Exams):",
+          "score": 0.704
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1836,
+      "output_tokens": 59,
+      "model_calls": 2,
+      "model_latency_ms": 3223,
+      "error": null,
+      "latency_s": 3.23,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from **30 November to 4 December**. You can find more details on the academic calendar.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n# Key centrally scheduled exam dates\n\nKey dates are available below for centrally scheduled periods (including Further and Deferred Exams):",
+          "score": 0.704
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1836,
+      "output_tokens": 59,
+      "model_calls": 2,
+      "model_latency_ms": 3114,
+      "error": null,
+      "latency_s": 3.12,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from **30 November to 4 December**. You can find more details on the academic calendar.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n# Key centrally scheduled exam dates\n\nKey dates are available below for centrally scheduled periods (including Further and Deferred Exams):",
+          "score": 0.704
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1836,
+      "output_tokens": 59,
+      "model_calls": 2,
+      "model_latency_ms": 3216,
+      "error": null,
+      "latency_s": 3.22,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is **16 April**. For more information, contact AccessAbility Services.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.684
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2115,
+      "output_tokens": 72,
+      "model_calls": 2,
+      "model_latency_ms": 4240,
+      "error": null,
+      "latency_s": 4.25,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is **16 April**. For more information, contact AccessAbility Services.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.684
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2115,
+      "output_tokens": 72,
+      "model_calls": 2,
+      "model_latency_ms": 3799,
+      "error": null,
+      "latency_s": 3.81,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is **16 April**. For more information, contact AccessAbility Services.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/examinations/key-dates/",
+          "title": "Key centrally scheduled exam dates | Current Students",
+          "snippet": "[Key centrally scheduled exam dates | Current Students]\n## Open Unis Study Period 3 2026\n\n30 October | Last date to apply for alternative arrangements | For more information, contact Services AccessAbility Services\n30 December | Results rel",
+          "score": 0.684
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 2115,
+      "output_tokens": 72,
+      "model_calls": 2,
+      "model_latency_ms": 3796,
+      "error": null,
+      "latency_s": 3.8,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using Curtin ePay, which is a quick and secure payment portal. To access it, go to the [Curtin ePay page](https://www.curtin.edu.au/students/essentials/fees/). \n\nIf you need further assistance, you can contact Curtin Connect for help.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Curtin ePay\n\nPay your fees using our quick and secure online payment portal, Curtin ePay.\n- Go to Curtin ePay",
+          "score": 0.71
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1505,
+      "output_tokens": 95,
+      "model_calls": 2,
+      "model_latency_ms": 4483,
+      "error": null,
+      "latency_s": 4.49,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using Curtin ePay, which is a quick and secure payment portal. To access it, go to the [Curtin ePay page](https://www.curtin.edu.au/students/essentials/fees/). \n\nIf you need further assistance, you can contact Curtin Connect for help.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Curtin ePay\n\nPay your fees using our quick and secure online payment portal, Curtin ePay.\n- Go to Curtin ePay",
+          "score": 0.71
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1505,
+      "output_tokens": 95,
+      "model_calls": 2,
+      "model_latency_ms": 4514,
+      "error": null,
+      "latency_s": 4.52,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using Curtin ePay, which is a quick and secure payment portal. To access it, go to the [Curtin ePay page](https://www.curtin.edu.au/students/essentials/fees/). \n\nIf you need further assistance, you can contact Curtin Connect for help.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Curtin ePay\n\nPay your fees using our quick and secure online payment portal, Curtin ePay.\n- Go to Curtin ePay",
+          "score": 0.71
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1505,
+      "output_tokens": 95,
+      "model_calls": 2,
+      "model_latency_ms": 4746,
+      "error": null,
+      "latency_s": 4.75,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which world ranking places Curtin in the top one per cent of universities?",
+      "answer": "Curtin University is ranked in the top one per cent of universities globally by the QS World University Rankings. For more details, you can visit the official Curtin University website.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 597,
+      "output_tokens": 37,
+      "model_calls": 1,
+      "model_latency_ms": 1992,
+      "error": null,
+      "latency_s": 1.99,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which world ranking places Curtin in the top one per cent of universities?",
+      "answer": "Curtin University is ranked in the top one per cent of universities globally by the QS World University Rankings. For more details, you can visit the official Curtin University website.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 597,
+      "output_tokens": 37,
+      "model_calls": 1,
+      "model_latency_ms": 1960,
+      "error": null,
+      "latency_s": 1.96,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which world ranking places Curtin in the top one per cent of universities?",
+      "answer": "Curtin University is ranked in the top one per cent of universities globally by the QS World University Rankings. For more details, you can visit the official Curtin University website.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 597,
+      "output_tokens": 37,
+      "model_calls": 1,
+      "model_latency_ms": 2067,
+      "error": null,
+      "latency_s": 2.07,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which Curtin library is open by appointment only?",
+      "answer": "The John Curtin Prime Ministerial Library is open by appointment only. For more information, you can visit the library's website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/library/",
+          "title": "Library | Curtin University, Perth, Australia",
+          "snippet": "[Library | Curtin University, Perth, Australia]\n## John Curtin Prime Ministerial Library\n\nOpen by appointment.\n- Find out more",
+          "score": 0.735
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1447,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2909,
+      "error": null,
+      "latency_s": 2.92,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which Curtin library is open by appointment only?",
+      "answer": "The John Curtin Prime Ministerial Library is open by appointment only. For more information, you can visit the library's website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/library/",
+          "title": "Library | Curtin University, Perth, Australia",
+          "snippet": "[Library | Curtin University, Perth, Australia]\n## John Curtin Prime Ministerial Library\n\nOpen by appointment.\n- Find out more",
+          "score": 0.735
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1447,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2902,
+      "error": null,
+      "latency_s": 2.91,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which Curtin library is open by appointment only?",
+      "answer": "The John Curtin Prime Ministerial Library is open by appointment only. For more information, you can visit the library's website.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/library/",
+          "title": "Library | Curtin University, Perth, Australia",
+          "snippet": "[Library | Curtin University, Perth, Australia]\n## John Curtin Prime Ministerial Library\n\nOpen by appointment.\n- Find out more",
+          "score": 0.735
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Curtin library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1447,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2911,
+      "error": null,
+      "latency_s": 2.92,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What phone number do I call to reach the Safer Community Team?",
+      "answer": "The phone number for the Safer Community Team is **08 9266 4444**. You can call this number if you have concerns about the safety, security, or wellbeing of yourself or others. For emergencies, please call **000**.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/personal-support/",
+          "title": "Personal support | Current Students",
+          "snippet": "# Personal support | Current Students\n\nSource: https://www.curtin.edu.au/students/personal-support/\n\nIf you have concerns about the safety, security, or wellbeing of yourself or others, you can choose to report an incident online , call our",
+          "score": 0.663
+        },
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Need help?\n\nIf you can\u2019t find what you need on our website, please contact us.\n- Contact Curtin Connect",
+          "score": 0.449
+        },
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Community engagement\n\nOur diverse range of initiatives and programs have created strong ties to the local and wider community. If you\u2019re a community member or organisation, see how you can get involved wit",
+          "score": 0.41
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Safer Community Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1601,
+      "output_tokens": 86,
+      "model_calls": 2,
+      "model_latency_ms": 4172,
+      "error": null,
+      "latency_s": 4.18,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What phone number do I call to reach the Safer Community Team?",
+      "answer": "The phone number for the Safer Community Team is **08 9266 4444**. You can call this number if you have concerns about the safety, security, or wellbeing of yourself or others. For emergencies, please call **000**.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/personal-support/",
+          "title": "Personal support | Current Students",
+          "snippet": "# Personal support | Current Students\n\nSource: https://www.curtin.edu.au/students/personal-support/\n\nIf you have concerns about the safety, security, or wellbeing of yourself or others, you can choose to report an incident online , call our",
+          "score": 0.663
+        },
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Need help?\n\nIf you can\u2019t find what you need on our website, please contact us.\n- Contact Curtin Connect",
+          "score": 0.449
+        },
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Community engagement\n\nOur diverse range of initiatives and programs have created strong ties to the local and wider community. If you\u2019re a community member or organisation, see how you can get involved wit",
+          "score": 0.41
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Safer Community Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1601,
+      "output_tokens": 86,
+      "model_calls": 2,
+      "model_latency_ms": 4285,
+      "error": null,
+      "latency_s": 4.29,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What phone number do I call to reach the Safer Community Team?",
+      "answer": "The phone number for the Safer Community Team is **08 9266 4444**. You can call this number if you have concerns about the safety, security, or wellbeing of yourself or others. For emergencies, please call **000**.",
+      "citations": [
+        {
+          "url": "https://www.curtin.edu.au/students/personal-support/",
+          "title": "Personal support | Current Students",
+          "snippet": "# Personal support | Current Students\n\nSource: https://www.curtin.edu.au/students/personal-support/\n\nIf you have concerns about the safety, security, or wellbeing of yourself or others, you can choose to report an incident online , call our",
+          "score": 0.663
+        },
+        {
+          "url": "https://www.curtin.edu.au/students/essentials/fees/",
+          "title": "Fees | Current Students",
+          "snippet": "[Fees | Current Students]\n### Need help?\n\nIf you can\u2019t find what you need on our website, please contact us.\n- Contact Curtin Connect",
+          "score": 0.449
+        },
+        {
+          "url": "https://www.curtin.edu.au/about/",
+          "title": "About us | Curtin University",
+          "snippet": "[About us | Curtin University]\n### Community engagement\n\nOur diverse range of initiatives and programs have created strong ties to the local and wider community. If you\u2019re a community member or organisation, see how you can get involved wit",
+          "score": 0.41
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Safer Community Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1601,
+      "output_tokens": 86,
+      "model_calls": 2,
+      "model_latency_ms": 4143,
+      "error": null,
+      "latency_s": 4.15,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 (Machine Learning Foundations) are as follows:\n\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 70,
+      "model_calls": 2,
+      "model_latency_ms": 3392,
+      "error": null,
+      "latency_s": 3.47,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 (Machine Learning Foundations) are as follows:\n\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 70,
+      "model_calls": 2,
+      "model_latency_ms": 3452,
+      "error": null,
+      "latency_s": 3.54,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 (Machine Learning Foundations) are as follows:\n\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 70,
+      "model_calls": 2,
+      "model_latency_ms": 3412,
+      "error": null,
+      "latency_s": 3.49,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "Before you can take DEMO3003 (Generative AI Engineering), you need to have completed DEMO2002.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2822,
+      "error": null,
+      "latency_s": 2.91,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "Before you can take DEMO3003 (Generative AI Engineering), you need to have completed DEMO2002.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 2843,
+      "error": null,
+      "latency_s": 2.92,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "Before you can take DEMO3003 (Generative AI Engineering), you need to have completed DEMO2002.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 3032,
+      "error": null,
+      "latency_s": 3.11,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How much does parking cost per hour at the Bentley campus?",
+      "answer": "I don't have information on parking costs at the Bentley campus. You may contact student services for assistance.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 594,
+      "output_tokens": 22,
+      "model_calls": 1,
+      "model_latency_ms": 1330,
+      "error": null,
+      "latency_s": 1.33,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How much does parking cost per hour at the Bentley campus?",
+      "answer": "I don't have information on parking costs at the Bentley campus. You may contact student services for assistance.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 594,
+      "output_tokens": 22,
+      "model_calls": 1,
+      "model_latency_ms": 1383,
+      "error": null,
+      "latency_s": 1.38,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How much does parking cost per hour at the Bentley campus?",
+      "answer": "I don't have information on parking costs at the Bentley campus. You may contact student services for assistance.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 594,
+      "output_tokens": 22,
+      "model_calls": 1,
+      "model_latency_ms": 1480,
+      "error": null,
+      "latency_s": 1.48,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    }
+  ]
+}

@@ -34,7 +34,7 @@ Rules:
 TOOLS = [
     {"toolSpec": {
         "name": "search_knowledge_base",
-        "description": "Search the university's public web pages: exam key dates, results release, fees and payment, how to apply, library, personal support and safety contacts. Returns the most relevant passages with their source URLs.",
+        "description": "Search the university's public web pages: about the university and its rankings, exam key dates, results release, fees and payment, how to apply, library, personal support and safety contacts. Returns the most relevant passages with their source URLs.",
         "inputSchema": {"json": {"type": "object", "properties": {
             "query": {"type": "string", "description": "A short search query in plain words"}}, "required": ["query"]}}}},
     {"toolSpec": {

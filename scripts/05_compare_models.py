@@ -15,7 +15,7 @@ import statistics
 import sys
 import time
 
-from common import RESULTS, ROOT, ask, client, outputs
+from common import LOCAL, RESULTS, ROOT, ask, client, outputs
 
 
 def passed(q: dict, r: dict) -> bool:
@@ -50,7 +50,7 @@ def main() -> int:
                 runs.append(r)
                 print(f"{key:<6} {q['id']} {'pass' if r['passed'] else 'FAIL'}  {r['latency_s']:>5} s  "
                       f"{r['input_tokens']:>5} in {r['output_tokens']:>4} out  {r['answer'].strip()[:60]!r}")
-                if not args.no_metrics and not r["error"]:
+                if not args.no_metrics and not LOCAL and not r["error"]:
                     dims = [{"Name": "Model", "Value": key}]
                     data = [{"MetricName": "LatencySeconds", "Dimensions": dims, "Value": r["latency_s"], "Unit": "Seconds"},
                             {"MetricName": "InputTokens", "Dimensions": dims, "Value": r["input_tokens"], "Unit": "Count"},
@@ -81,10 +81,14 @@ def main() -> int:
         }
 
     RESULTS.mkdir(exist_ok=True)
-    (RESULTS / "comparison.json").write_text(json.dumps({"summary": summary, "runs": [{k: v for k, v in r.items() if k != "messages"} for r in runs]}, indent=2, default=str), encoding="utf-8")
+    name = "comparison_local" if LOCAL else "comparison"
+    (RESULTS / f"{name}.json").write_text(json.dumps({"summary": summary, "runs": [{k: v for k, v in r.items() if k != "messages"} for r in runs]}, indent=2, default=str), encoding="utf-8")
     md = ["# Model comparison", "",
           f"{len(questions)} questions, {args.repeats} run(s) each, through the full agent loop (guardrail, knowledge base, tools).",
-          "Costs use the hand-entered table in `data/prices.json`; check it against the AWS pricing page.", "",
+          ("**Local stand-in run.** The models are open models on one workstation GPU and retrieval is local, because the "
+           "AWS account's Bedrock model quota was still 0. The guardrail (ApplyGuardrail) and the Lambda tools are the deployed "
+           "AWS resources. Latency and tokens are not Bedrock figures and there is no cost." if LOCAL else
+           "Costs use the hand-entered table in `data/prices.json`; check it against the AWS pricing page."), "",
           "| | " + " | ".join(summary) + " |", "| --- |" + " --- |" * len(summary)]
     rows = [("Model", "model"), ("Questions passed", None), ("Knowledge base questions", "kb"), ("Tool questions", "tool"),
             ("Unanswerable question handled", "abstain"), ("Errors", "errors"),
@@ -104,9 +108,9 @@ def main() -> int:
     md += ["", "## Per question", "", "| Model | Id | Kind | Pass | Latency (s) | In | Out | Answer |", "| --- | --- | --- | --- | --- | --- | --- | --- |"]
     md += [f"| {r['model_key']} | {r['id']} | {r['kind']} | {'yes' if r['passed'] else 'no'} | {r['latency_s']} | {r['input_tokens']} | "
            f"{r['output_tokens']} | {(r['answer'].strip() or r['error'] or '').replace(chr(10), ' ').replace('|', '/')[:140]} |" for r in runs]
-    (RESULTS / "comparison.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (RESULTS / f"{name}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n" + json.dumps(summary, indent=2))
-    print(f"\nwrote {RESULTS / 'comparison.md'}")
+    print(f"\nwrote {RESULTS / (name + '.md')}")
     return 0
 
 

@@ -27,10 +27,8 @@ resource "aws_bedrock_guardrail" "main" {
       type   = "EMAIL"
       action = "ANONYMIZE"
     }
-    pii_entities_config {
-      type   = "PHONE"
-      action = "ANONYMIZE"
-    }
+    # PHONE was masked in version 1. Testing showed it also masked the university's own
+    # public numbers (the Safer Community line), so it was removed in version 2.
     pii_entities_config {
       type   = "CREDIT_DEBIT_CARD_NUMBER"
       action = "BLOCK"
@@ -48,10 +46,14 @@ resource "aws_bedrock_guardrail" "main" {
     topics_config {
       name       = "assessment-ghostwriting"
       type       = "DENY"
-      definition = "Requests to write, complete or rewrite an assessable assignment, essay, exam answer or thesis for a student to submit as their own work."
+      # Version 1 mentioned "an assessable assignment" and fired on a legitimate answer that
+      # listed a unit's assessments. Adding "not about assessment facts" made it worse: the
+      # definition is matched on meaning, so naming a thing pulls it in. Version 2 describes
+      # only the behaviour to deny and avoids the word "assessment".
+      definition = "Asking for an essay, report or set of answers to be written on the student's behalf so they can hand it in as their own work."
       examples = [
         "Write my 2000 word essay on climate policy so I can submit it tomorrow.",
-        "Complete this assignment for me and make it pass the plagiarism check.",
+        "Do my coursework for me and make it pass the plagiarism check.",
         "Give me the answers to my take-home exam.",
       ]
     }
@@ -61,6 +63,6 @@ resource "aws_bedrock_guardrail" "main" {
 # Agents attach a numbered, immutable guardrail version rather than the draft.
 resource "aws_bedrock_guardrail_version" "v1" {
   guardrail_arn = aws_bedrock_guardrail.main.guardrail_arn
-  description   = "Initial version"
+  description   = "v2: denied topic narrowed; public phone numbers not masked"
   skip_destroy  = false
 }

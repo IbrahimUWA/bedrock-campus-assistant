@@ -36,6 +36,19 @@ what it teaches about Bedrock.
    The first time an account uses an Anthropic model, AWS asks for a short use-case form in the Bedrock console
    (**Model catalog**, pick the model).
 
+### If model calls are refused on a new account
+
+A new account can fail the preflight with `ThrottlingException: Too many tokens per day` on every model. Check
+**Service Quotas > Amazon Bedrock**: if the applied values are 0 while the AWS defaults are not, the account is
+restricted. What I did: upgraded from the Free plan to the Paid plan (credits are kept), submitted the Anthropic
+use-case form, and opened an **Account and billing** support case asking for the default Bedrock quotas. Everything
+except model calls still deploys, and step 3 onwards can run with `$env:CAMPUS_BACKEND = "local"` (see the README).
+
+### Cost control
+
+Create a budget in **Billing and Cost Management > Budgets** (for example 10 USD with an email alert) before you
+deploy. Nothing in this stack bills while idle apart from a few cents of storage.
+
 ## 1. Build the infrastructure
 
 ```powershell

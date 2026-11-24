@@ -20,8 +20,10 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "pages"
 USER_AGENT = "campus-assistant-demo/1.0 (one-off educational fetch)"
-DROP = ["script", "style", "noscript", "nav", "header", "footer", "form", "svg", "iframe", "aside", "button"]
-BLOCKS = ["h1", "h2", "h3", "h4", "p", "li", "tr", "dt", "dd"]
+# Buttons are kept: on these pages the section headings of the date tables ("Semester 2 2026")
+# are accordion buttons. Dropping them left every table unlabelled and date questions unanswerable.
+DROP = ["script", "style", "noscript", "nav", "header", "footer", "form", "svg", "iframe", "aside"]
+BLOCKS = ["h1", "h2", "h3", "h4", "button", "p", "li", "tr", "dt", "dd"]
 
 
 def page_to_text(html: str) -> tuple[str, str]:
@@ -35,6 +37,8 @@ def page_to_text(html: str) -> tuple[str, str]:
         # Skip containers whose text is repeated by a nested block.
         if el.name in ("li", "dd") and el.find(["p", "li"]):
             continue
+        if el.name == "button" and not (el.get("aria-controls") or el.get("aria-expanded")):
+            continue                      # only accordion headers, not "Search" or "Menu"
         if el.name == "tr":
             text = " | ".join(c.get_text(" ", strip=True) for c in el.find_all(["th", "td"]))
         else:
@@ -43,7 +47,9 @@ def page_to_text(html: str) -> tuple[str, str]:
         if len(text) < 3 or text in seen:
             continue
         seen.add(text)
-        if el.name in ("h1", "h2", "h3", "h4"):
+        if el.name == "button":
+            lines.append("\n## " + text + "\n")
+        elif el.name in ("h1", "h2", "h3", "h4"):
             lines.append("\n" + "#" * int(el.name[1]) + " " + text + "\n")
         elif el.name == "li":
             lines.append("- " + text)
