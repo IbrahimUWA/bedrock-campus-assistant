@@ -192,7 +192,7 @@ fee and phone number is invented, so the pages can be shown, recorded and redist
 
 ```powershell
 $env:CAMPUS_BACKEND = "local"; $env:CAMPUS_DATASET = "demo"
-python scripts_compare_models.py --repeats 3            # writes results\comparison_local_demo.md
+python scripts\05_compare_models.py --repeats 3            # writes results\comparison_local_demo.md
 streamlit run scriptspp.py
 ```
 
