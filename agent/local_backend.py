@@ -20,6 +20,7 @@ not Bedrock latency, token or cost figures.
     local_backend.install(cfg)      # then call core.run(question, MODEL_ID, cfg)
 """
 import json
+import os
 import re
 import time
 from pathlib import Path
@@ -31,7 +32,8 @@ from . import core
 MODELS = {"local/Qwen3-8B": "Qwen/Qwen3-8B", "local/Qwen3-14B": "Qwen/Qwen3-14B"}   # model id -> Hugging Face repo
 MODEL_ID = "local/Qwen3-8B"
 HF_EMBEDDER = "BAAI/bge-base-en-v1.5"
-PAGES = Path(__file__).resolve().parent.parent / "data" / "pages"
+_DEMO = os.environ.get("CAMPUS_DATASET", "").lower() == "demo"      # fictional university pages, data/demo_site
+PAGES = Path(__file__).resolve().parent.parent / "data" / ("demo_site" if _DEMO else "pages")
 CHUNK_CHARS, OVERLAP_CHARS = 1200, 240      # about 300 tokens with 20% overlap, as in the Knowledge Base
 
 
@@ -68,7 +70,7 @@ class LocalKnowledgeBase:
         from sentence_transformers import SentenceTransformer
         self.model = SentenceTransformer(HF_EMBEDDER)
         self.rows = []
-        for page in sorted(PAGES.glob("*.md")):
+        for page in sorted(p for p in PAGES.glob("*.md") if p.name != "README.md"):
             meta = json.loads((PAGES / (page.name + ".metadata.json")).read_text(encoding="utf-8"))["metadataAttributes"]
             self.rows += [{"text": c, "meta": meta} for c in _chunks(page.read_text(encoding="utf-8"))]
         if not self.rows:

@@ -6,12 +6,12 @@ and writes the vectors. Re-running it only re-indexes changed files.
 import sys
 import time
 
-from common import ROOT, client, outputs
+from common import PAGES, ROOT, client, outputs
 
 
 def main() -> int:
     out = outputs()
-    pages = sorted((ROOT / "data" / "pages").glob("*"))
+    pages = sorted(p for p in PAGES.glob("*") if p.name != "README.md")
     if not pages:
         print("No pages found. Run scripts/01_fetch_pages.py first.")
         return 1

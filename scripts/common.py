@@ -19,6 +19,12 @@ from agent import core  # noqa: E402
 LOCAL = os.environ.get("CAMPUS_BACKEND", "").lower() == "local"
 LOCAL_MODELS = {"qwen3-8b": "local/Qwen3-8B", "qwen3-14b": "local/Qwen3-14B"}
 
+# CAMPUS_DATASET=demo uses the pages written for this project (data/demo_site, a fictional
+# university) instead of the pages downloaded by 01_fetch_pages.py.
+DEMO = os.environ.get("CAMPUS_DATASET", "").lower() == "demo"
+PAGES = ROOT / "data" / ("demo_site" if DEMO else "pages")
+EVAL_FILE = ROOT / "data" / ("eval_questions_demo.json" if DEMO else "eval_questions.json")
+
 
 def outputs() -> dict:
     """Terraform outputs as {name: value}. deploy.ps1 writes infra/outputs.json."""

@@ -1,0 +1,1996 @@
+{
+  "summary": {
+    "qwen3-8b": {
+      "model": "local/Qwen3-8B",
+      "runs": 30,
+      "errors": 0,
+      "passed": 27,
+      "by_kind": {
+        "kb": "18/21",
+        "tool": "6/6",
+        "abstain": "3/3"
+      },
+      "latency_median_s": 4.33,
+      "latency_max_s": 16.25,
+      "input_tokens_mean": 1689,
+      "output_tokens_mean": 70,
+      "cost_per_question_usd": null,
+      "cost_per_1000_questions_usd": null
+    },
+    "qwen3-14b": {
+      "model": "local/Qwen3-14B",
+      "runs": 30,
+      "errors": 0,
+      "passed": 24,
+      "by_kind": {
+        "kb": "15/21",
+        "tool": "6/6",
+        "abstain": "3/3"
+      },
+      "latency_median_s": 6.19,
+      "latency_max_s": 44.55,
+      "input_tokens_mean": 1471,
+      "output_tokens_mean": 77,
+      "cost_per_question_usd": null,
+      "cost_per_1000_questions_usd": null
+    }
+  },
+  "runs": [
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are released on Monday 7 December 2026 after the mid-year exam period.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.539
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results released after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1861,
+      "output_tokens": 49,
+      "model_calls": 2,
+      "model_latency_ms": 5053,
+      "error": null,
+      "latency_s": 16.25,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are released on Monday 7 December 2026 after the mid-year exam period.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.539
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results released after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1861,
+      "output_tokens": 49,
+      "model_calls": 2,
+      "model_latency_ms": 4311,
+      "error": null,
+      "latency_s": 4.32,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are released on Monday 7 December 2026 after the mid-year exam period.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.539
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results released after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1861,
+      "output_tokens": 49,
+      "model_calls": 2,
+      "model_latency_ms": 4013,
+      "error": null,
+      "latency_s": 4.02,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November for Semester 2 2026 is from Monday 9 November to Friday 20 November 2026. For Semester 2 2027, it is from Monday 8 November to Friday 19 November 2027.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.597
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1935,
+      "output_tokens": 93,
+      "model_calls": 2,
+      "model_latency_ms": 6567,
+      "error": null,
+      "latency_s": 6.57,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November for Semester 2 2026 is from Monday 9 November to Friday 20 November 2026. For Semester 2 2027, it is from Monday 8 November to Friday 19 November 2027.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.597
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1935,
+      "output_tokens": 93,
+      "model_calls": 2,
+      "model_latency_ms": 5326,
+      "error": null,
+      "latency_s": 5.33,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November for Semester 2 2026 is from Monday 9 November to Friday 20 November 2026. For Semester 2 2027, it is from Monday 8 November to Friday 19 November 2027.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.597
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1935,
+      "output_tokens": 93,
+      "model_calls": 2,
+      "model_latency_ms": 6147,
+      "error": null,
+      "latency_s": 6.15,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is Friday 23 April 2027.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 1 2027\n\nEvent | Date\nPersonal exam timetable published | Monday 12 April 2027\nLast date to apply for alternative exam arrangements | Friday 23 April 2027\nStudy week | ",
+          "score": 0.695
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.653
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements in Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1999,
+      "output_tokens": 69,
+      "model_calls": 2,
+      "model_latency_ms": 3999,
+      "error": null,
+      "latency_s": 4.02,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is Friday 23 April 2027.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 1 2027\n\nEvent | Date\nPersonal exam timetable published | Monday 12 April 2027\nLast date to apply for alternative exam arrangements | Friday 23 April 2027\nStudy week | ",
+          "score": 0.695
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.653
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements in Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1999,
+      "output_tokens": 69,
+      "model_calls": 2,
+      "model_latency_ms": 5038,
+      "error": null,
+      "latency_s": 5.14,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is Friday 23 April 2027.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 1 2027\n\nEvent | Date\nPersonal exam timetable published | Monday 12 April 2027\nLast date to apply for alternative exam arrangements | Friday 23 April 2027\nStudy week | ",
+          "score": 0.695
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.653
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements in Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1999,
+      "output_tokens": 69,
+      "model_calls": 2,
+      "model_latency_ms": 5960,
+      "error": null,
+      "latency_s": 6.06,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using PayPoint, the university's payment page, with a credit or debit card. Card payments have a surcharge of 0.9 per cent. Alternatively, you can use BPAY from your bank account with the biller code and reference number from your fee statement, which has no surcharge. For more details, visit [Fees | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/fees/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.684
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "How to pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1635,
+      "output_tokens": 125,
+      "model_calls": 2,
+      "model_latency_ms": 8960,
+      "error": null,
+      "latency_s": 8.97,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using PayPoint, the university's payment page, with a credit or debit card. Card payments have a surcharge of 0.9 per cent. Alternatively, you can use BPAY from your bank account with the biller code and reference number from your fee statement, which has no surcharge. For more details, visit [Fees | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/fees/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.684
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "How to pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1635,
+      "output_tokens": 125,
+      "model_calls": 2,
+      "model_latency_ms": 8528,
+      "error": null,
+      "latency_s": 8.54,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using PayPoint, the university's payment page, with a credit or debit card. Card payments have a surcharge of 0.9 per cent. Alternatively, you can use BPAY from your bank account with the biller code and reference number from your fee statement, which has no surcharge. For more details, visit [Fees | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/fees/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.684
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "How to pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1635,
+      "output_tokens": 125,
+      "model_calls": 2,
+      "model_latency_ms": 8096,
+      "error": null,
+      "latency_s": 8.1,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "For which subject does Wattlebrook have its highest world ranking?",
+      "answer": "Wattlebrook University has its highest world ranking in the subject of mineral and mining engineering, where it is ranked 31st globally according to the Global Campus Index 2026.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Rankings and reputation\n\nThe Global Campus Index 2026 places Wattlebrook in the top 250 universities in the world. In the same index the university is ranked 31st in the world for mineral and mining en",
+          "score": 0.771
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Postgraduate courses\n\nApply directly through the Apply Online portal. Research degrees also need a short research proposal and the name of a supervisor who has agreed to work wi",
+          "score": 0.586
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook highest world ranking subject"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1674,
+      "output_tokens": 68,
+      "model_calls": 2,
+      "model_latency_ms": 5201,
+      "error": null,
+      "latency_s": 5.22,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "For which subject does Wattlebrook have its highest world ranking?",
+      "answer": "Wattlebrook University has its highest world ranking in the subject of mineral and mining engineering, where it is ranked 31st globally according to the Global Campus Index 2026.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Rankings and reputation\n\nThe Global Campus Index 2026 places Wattlebrook in the top 250 universities in the world. In the same index the university is ranked 31st in the world for mineral and mining en",
+          "score": 0.771
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Postgraduate courses\n\nApply directly through the Apply Online portal. Research degrees also need a short research proposal and the name of a supervisor who has agreed to work wi",
+          "score": 0.586
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook highest world ranking subject"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1674,
+      "output_tokens": 68,
+      "model_calls": 2,
+      "model_latency_ms": 4314,
+      "error": null,
+      "latency_s": 4.33,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "For which subject does Wattlebrook have its highest world ranking?",
+      "answer": "Wattlebrook University has its highest world ranking in the subject of mineral and mining engineering, where it is ranked 31st globally according to the Global Campus Index 2026.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Rankings and reputation\n\nThe Global Campus Index 2026 places Wattlebrook in the top 250 universities in the world. In the same index the university is ranked 31st in the world for mineral and mining en",
+          "score": 0.771
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Postgraduate courses\n\nApply directly through the Apply Online portal. Research degrees also need a short research proposal and the name of a supervisor who has agreed to work wi",
+          "score": 0.586
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook highest world ranking subject"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1674,
+      "output_tokens": 68,
+      "model_calls": 2,
+      "model_latency_ms": 4108,
+      "error": null,
+      "latency_s": 4.12,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which Wattlebrook library is open by appointment only?",
+      "answer": "The Harcourt Special Collections Library at the Riverbend campus is open by appointment only. You need to book at least two working days in advance.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.739
+        },
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.713
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Counselling\n\nThe Counselling Service offers free and confidential appointments to enrolled students. You can have up to six sessions each year. Book through the Student Porta",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.665
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1748,
+      "output_tokens": 60,
+      "model_calls": 2,
+      "model_latency_ms": 3879,
+      "error": null,
+      "latency_s": 3.89,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which Wattlebrook library is open by appointment only?",
+      "answer": "The Harcourt Special Collections Library at the Riverbend campus is open by appointment only. You need to book at least two working days in advance.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.739
+        },
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.713
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Counselling\n\nThe Counselling Service offers free and confidential appointments to enrolled students. You can have up to six sessions each year. Book through the Student Porta",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.665
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1748,
+      "output_tokens": 60,
+      "model_calls": 2,
+      "model_latency_ms": 4079,
+      "error": null,
+      "latency_s": 4.09,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "Which Wattlebrook library is open by appointment only?",
+      "answer": "The Harcourt Special Collections Library at the Riverbend campus is open by appointment only. You need to book at least two working days in advance.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.739
+        },
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.713
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Counselling\n\nThe Counselling Service offers free and confidential appointments to enrolled students. You can have up to six sessions each year. Book through the Student Porta",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.665
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1748,
+      "output_tokens": 60,
+      "model_calls": 2,
+      "model_latency_ms": 3985,
+      "error": null,
+      "latency_s": 3.99,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What phone number do I call to reach the Campus Safety Team?",
+      "answer": "The phone number for the Campus Safety Team is (08) 5550 0142. You can contact them at any time, day or night.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Campus Safety Team\n\nIf you feel unsafe on campus, or are worried about the behaviour of another person, contact the Campus Safety Team on (08) 5550 0142 at any time, day or n",
+          "score": 0.755
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.418
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Campus Safety Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1686,
+      "output_tokens": 64,
+      "model_calls": 2,
+      "model_latency_ms": 4784,
+      "error": null,
+      "latency_s": 4.79,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What phone number do I call to reach the Campus Safety Team?",
+      "answer": "The phone number for the Campus Safety Team is (08) 5550 0142. You can contact them at any time, day or night.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Campus Safety Team\n\nIf you feel unsafe on campus, or are worried about the behaviour of another person, contact the Campus Safety Team on (08) 5550 0142 at any time, day or n",
+          "score": 0.755
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.418
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Campus Safety Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1686,
+      "output_tokens": 64,
+      "model_calls": 2,
+      "model_latency_ms": 5830,
+      "error": null,
+      "latency_s": 5.84,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What phone number do I call to reach the Campus Safety Team?",
+      "answer": "The phone number for the Campus Safety Team is (08) 5550 0142. You can contact them at any time, day or night.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Campus Safety Team\n\nIf you feel unsafe on campus, or are worried about the behaviour of another person, contact the Campus Safety Team on (08) 5550 0142 at any time, day or n",
+          "score": 0.755
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.418
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Campus Safety Team phone number"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1686,
+      "output_tokens": 64,
+      "model_calls": 2,
+      "model_latency_ms": 4023,
+      "error": null,
+      "latency_s": 4.03,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 are:\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 3782,
+      "error": null,
+      "latency_s": 4.87,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 are:\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 3836,
+      "error": null,
+      "latency_s": 3.93,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 are:\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 63,
+      "model_calls": 2,
+      "model_latency_ms": 5139,
+      "error": null,
+      "latency_s": 5.22,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "You need to have completed DEMO2002 before you can take DEMO3003.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 50,
+      "model_calls": 2,
+      "model_latency_ms": 3975,
+      "error": null,
+      "latency_s": 4.05,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "You need to have completed DEMO2002 before you can take DEMO3003.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 50,
+      "model_calls": 2,
+      "model_latency_ms": 3010,
+      "error": null,
+      "latency_s": 3.09,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "You need to have completed DEMO2002 before you can take DEMO3003.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 50,
+      "model_calls": 2,
+      "model_latency_ms": 3462,
+      "error": null,
+      "latency_s": 3.55,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How much does parking cost per hour at the Riverbend campus?",
+      "answer": "The search results do not provide information about parking costs at the Riverbend campus. For more details, please contact student services.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.639
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Health\n\nThe Riverbend Medical Centre in Building 109 has doctors and nurses on weekdays. Appointments are bulk billed for students with a Medicare card.",
+          "score": 0.586
+        },
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.568
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "parking cost per hour Riverbend campus"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1679,
+      "output_tokens": 57,
+      "model_calls": 2,
+      "model_latency_ms": 4061,
+      "error": null,
+      "latency_s": 4.07,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How much does parking cost per hour at the Riverbend campus?",
+      "answer": "The search results do not provide information about parking costs at the Riverbend campus. For more details, please contact student services.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.639
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Health\n\nThe Riverbend Medical Centre in Building 109 has doctors and nurses on weekdays. Appointments are bulk billed for students with a Medicare card.",
+          "score": 0.586
+        },
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.568
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "parking cost per hour Riverbend campus"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1679,
+      "output_tokens": 57,
+      "model_calls": 2,
+      "model_latency_ms": 4258,
+      "error": null,
+      "latency_s": 4.27,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-8B",
+      "question": "How much does parking cost per hour at the Riverbend campus?",
+      "answer": "The search results do not provide information about parking costs at the Riverbend campus. For more details, please contact student services.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.639
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Health\n\nThe Riverbend Medical Centre in Building 109 has doctors and nurses on weekdays. Appointments are bulk billed for students with a Medicare card.",
+          "score": 0.586
+        },
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.568
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "parking cost per hour Riverbend campus"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1679,
+      "output_tokens": 57,
+      "model_calls": 2,
+      "model_latency_ms": 3714,
+      "error": null,
+      "latency_s": 3.72,
+      "model_key": "qwen3-8b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released one week after the centrally scheduled exam period. For example, in Semester 2 2026, results were released on Monday, 7 December 2026, following the exam period from Monday, 9 November to Friday, 20 November 2026. \n\nFor the most accurate information, check the key dates for your specific semester on the [Wattlebrook University exam key dates page](https://www.wattlebrook.example/students/exams/key-dates/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 2 2026\n\nEvent | Date\nPersonal exam timetable published | Monday 5 October 2026\nLast date to apply for alternative exam arrangements | Friday 16 October 2026\nStudy week",
+          "score": 0.529
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results release after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1861,
+      "output_tokens": 136,
+      "model_calls": 2,
+      "model_latency_ms": 12021,
+      "error": null,
+      "latency_s": 44.55,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released one week after the centrally scheduled exam period. For example, in Semester 2 2026, results were released on Monday, 7 December 2026, following the exam period from Monday, 9 November to Friday, 20 November 2026. \n\nFor the most accurate information, check the key dates for your specific semester on the [Wattlebrook University exam key dates page](https://www.wattlebrook.example/students/exams/key-dates/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 2 2026\n\nEvent | Date\nPersonal exam timetable published | Monday 5 October 2026\nLast date to apply for alternative exam arrangements | Friday 16 October 2026\nStudy week",
+          "score": 0.529
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results release after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1861,
+      "output_tokens": 136,
+      "model_calls": 2,
+      "model_latency_ms": 10309,
+      "error": null,
+      "latency_s": 10.32,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When are results released after the mid-year exam period?",
+      "answer": "Results are typically released one week after the centrally scheduled exam period. For example, in Semester 2 2026, results were released on Monday, 7 December 2026, following the exam period from Monday, 9 November to Friday, 20 November 2026. \n\nFor the most accurate information, check the key dates for your specific semester on the [Wattlebrook University exam key dates page](https://www.wattlebrook.example/students/exams/key-dates/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 2 2026\n\nEvent | Date\nPersonal exam timetable published | Monday 5 October 2026\nLast date to apply for alternative exam arrangements | Friday 16 October 2026\nStudy week",
+          "score": 0.529
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "results release after mid-year exam period"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1861,
+      "output_tokens": 136,
+      "model_calls": 2,
+      "model_latency_ms": 11832,
+      "error": null,
+      "latency_s": 11.84,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q01",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from Monday 8 November to Friday 19 November for Semester 2 2027. For other years or semesters, please check the relevant key dates. Source: [Key exam dates | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/exams/key-dates/)",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.597
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1935,
+      "output_tokens": 103,
+      "model_calls": 2,
+      "model_latency_ms": 8091,
+      "error": null,
+      "latency_s": 8.1,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from Monday 8 November to Friday 19 November for Semester 2 2027. For other years or semesters, please check the relevant key dates. Source: [Key exam dates | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/exams/key-dates/)",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.597
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1935,
+      "output_tokens": 103,
+      "model_calls": 2,
+      "model_latency_ms": 7809,
+      "error": null,
+      "latency_s": 7.82,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "When is the centrally scheduled exam period in November?",
+      "answer": "The centrally scheduled exam period in November is from Monday 8 November to Friday 19 November for Semester 2 2027. For other years or semesters, please check the relevant key dates. Source: [Key exam dates | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/exams/key-dates/)",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "# Key exam dates | Current Students | Wattlebrook University\n\nSource: https://www.wattlebrook.example/students/exams/key-dates/\n\nThese are the dates for centrally scheduled exams. Exams set by your school during the teaching weeks are not l",
+          "score": 0.597
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "centrally scheduled exam period in November"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1935,
+      "output_tokens": 103,
+      "model_calls": 2,
+      "model_latency_ms": 7935,
+      "error": null,
+      "latency_s": 7.94,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q02",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is **Friday 23 April 2027**. \n\nYou can find more information about exam dates [here](https://www.wattlebrook.example/students/exams/key-dates/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 2 2027\n\nEvent | Date\nPersonal exam timetable published | Monday 4 October 2027\nLast date to apply for alternative exam arrangements | Friday 15 October 2027\nStudy week",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.65
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1998,
+      "output_tokens": 98,
+      "model_calls": 2,
+      "model_latency_ms": 7413,
+      "error": null,
+      "latency_s": 7.42,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is **Friday 23 April 2027**. \n\nYou can find more information about exam dates [here](https://www.wattlebrook.example/students/exams/key-dates/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 2 2027\n\nEvent | Date\nPersonal exam timetable published | Monday 4 October 2027\nLast date to apply for alternative exam arrangements | Friday 15 October 2027\nStudy week",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.65
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1998,
+      "output_tokens": 98,
+      "model_calls": 2,
+      "model_latency_ms": 8864,
+      "error": null,
+      "latency_s": 8.87,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What is the last date to apply for alternative exam arrangements in Semester 1 2027?",
+      "answer": "The last date to apply for alternative exam arrangements in Semester 1 2027 is **Friday 23 April 2027**. \n\nYou can find more information about exam dates [here](https://www.wattlebrook.example/students/exams/key-dates/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/exams/key-dates/",
+          "title": "Key exam dates | Current Students | Wattlebrook University",
+          "snippet": "[Key exam dates | Current Students | Wattlebrook University]\n## Semester 2 2027\n\nEvent | Date\nPersonal exam timetable published | Monday 4 October 2027\nLast date to apply for alternative exam arrangements | Friday 15 October 2027\nStudy week",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.65
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "last date to apply for alternative exam arrangements Semester 1 2027"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1998,
+      "output_tokens": 98,
+      "model_calls": 2,
+      "model_latency_ms": 8292,
+      "error": null,
+      "latency_s": 8.3,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q03",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using PayPoint, the university's payment page, with a credit or debit card. There is a surcharge of 0.9 per cent for card payments. Alternatively, you can use BPAY from your bank account with the biller code and reference number on your fee statement, which has no surcharge. \n\nFor more details, visit: [Fees | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/fees/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.662
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1633,
+      "output_tokens": 127,
+      "model_calls": 2,
+      "model_latency_ms": 11675,
+      "error": null,
+      "latency_s": 11.68,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using PayPoint, the university's payment page, with a credit or debit card. There is a surcharge of 0.9 per cent for card payments. Alternatively, you can use BPAY from your bank account with the biller code and reference number on your fee statement, which has no surcharge. \n\nFor more details, visit: [Fees | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/fees/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.662
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1633,
+      "output_tokens": 127,
+      "model_calls": 2,
+      "model_latency_ms": 11621,
+      "error": null,
+      "latency_s": 11.63,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How can I pay my fees online?",
+      "answer": "You can pay your fees online using PayPoint, the university's payment page, with a credit or debit card. There is a surcharge of 0.9 per cent for card payments. Alternatively, you can use BPAY from your bank account with the biller code and reference number on your fee statement, which has no surcharge. \n\nFor more details, visit: [Fees | Current Students | Wattlebrook University](https://www.wattlebrook.example/students/fees/).",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/students/fees/",
+          "title": "Fees | Current Students | Wattlebrook University",
+          "snippet": "[Fees | Current Students | Wattlebrook University]\n## How to pay\n\n- Online with PayPoint, the university's payment page, using a credit or debit card. Card payments have a surcharge of 0.9 per cent.\n- By BPAY from your bank account, using t",
+          "score": 0.662
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "pay fees online"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1633,
+      "output_tokens": 127,
+      "model_calls": 2,
+      "model_latency_ms": 10996,
+      "error": null,
+      "latency_s": 11.01,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q04",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "For which subject does Wattlebrook have its highest world ranking?",
+      "answer": "Wattlebrook University has its highest world ranking in **mineral and mining engineering**, where it is ranked 31st globally according to the Global Campus Index 2026.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Rankings and reputation\n\nThe Global Campus Index 2026 places Wattlebrook in the top 250 universities in the world. In the same index the university is ranked 31st in the world for mineral and mining en",
+          "score": 0.771
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Postgraduate courses\n\nApply directly through the Apply Online portal. Research degrees also need a short research proposal and the name of a supervisor who has agreed to work wi",
+          "score": 0.586
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook highest world ranking subject"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1674,
+      "output_tokens": 67,
+      "model_calls": 2,
+      "model_latency_ms": 6030,
+      "error": null,
+      "latency_s": 6.04,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "For which subject does Wattlebrook have its highest world ranking?",
+      "answer": "Wattlebrook University has its highest world ranking in **mineral and mining engineering**, where it is ranked 31st globally according to the Global Campus Index 2026.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Rankings and reputation\n\nThe Global Campus Index 2026 places Wattlebrook in the top 250 universities in the world. In the same index the university is ranked 31st in the world for mineral and mining en",
+          "score": 0.771
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Postgraduate courses\n\nApply directly through the Apply Online portal. Research degrees also need a short research proposal and the name of a supervisor who has agreed to work wi",
+          "score": 0.586
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook highest world ranking subject"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1674,
+      "output_tokens": 67,
+      "model_calls": 2,
+      "model_latency_ms": 6184,
+      "error": null,
+      "latency_s": 6.2,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "For which subject does Wattlebrook have its highest world ranking?",
+      "answer": "Wattlebrook University has its highest world ranking in **mineral and mining engineering**, where it is ranked 31st globally according to the Global Campus Index 2026.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Rankings and reputation\n\nThe Global Campus Index 2026 places Wattlebrook in the top 250 universities in the world. In the same index the university is ranked 31st in the world for mineral and mining en",
+          "score": 0.771
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Postgraduate courses\n\nApply directly through the Apply Online portal. Research degrees also need a short research proposal and the name of a supervisor who has agreed to work wi",
+          "score": 0.586
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook highest world ranking subject"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1674,
+      "output_tokens": 67,
+      "model_calls": 2,
+      "model_latency_ms": 5543,
+      "error": null,
+      "latency_s": 5.55,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q05",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which Wattlebrook library is open by appointment only?",
+      "answer": "The Harcourt Special Collections Library, located on the Riverbend campus in Building 200, is open by appointment only. You need to book at least two working days in advance.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.739
+        },
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.713
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Counselling\n\nThe Counselling Service offers free and confidential appointments to enrolled students. You can have up to six sessions each year. Book through the Student Porta",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.665
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1748,
+      "output_tokens": 69,
+      "model_calls": 2,
+      "model_latency_ms": 5622,
+      "error": null,
+      "latency_s": 5.63,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which Wattlebrook library is open by appointment only?",
+      "answer": "The Harcourt Special Collections Library, located on the Riverbend campus in Building 200, is open by appointment only. You need to book at least two working days in advance.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.739
+        },
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.713
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Counselling\n\nThe Counselling Service offers free and confidential appointments to enrolled students. You can have up to six sessions each year. Book through the Student Porta",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.665
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1748,
+      "output_tokens": 69,
+      "model_calls": 2,
+      "model_latency_ms": 5502,
+      "error": null,
+      "latency_s": 5.51,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "Which Wattlebrook library is open by appointment only?",
+      "answer": "The Harcourt Special Collections Library, located on the Riverbend campus in Building 200, is open by appointment only. You need to book at least two working days in advance.",
+      "citations": [
+        {
+          "url": "https://www.wattlebrook.example/library/",
+          "title": "Library | Wattlebrook University",
+          "snippet": "[Library | Wattlebrook University]\n## Our libraries\n\n- Eleanor Marsh Library (Riverbend campus, Building 105). The main library. Open 24 hours a day during semester for students and staff with an ID card; the service desk is staffed from 8 ",
+          "score": 0.739
+        },
+        {
+          "url": "https://www.wattlebrook.example/about/",
+          "title": "About us | Wattlebrook University",
+          "snippet": "[About us | Wattlebrook University]\n## Visiting\n\nThe Riverbend campus is open to visitors from 7 am to 9 pm on weekdays. Guided campus tours run every Wednesday at 10 am during semester and leave from the Welcome Centre in Building 100.",
+          "score": 0.713
+        },
+        {
+          "url": "https://www.wattlebrook.example/students/support/",
+          "title": "Personal support | Current Students | Wattlebrook University",
+          "snippet": "[Personal support | Current Students | Wattlebrook University]\n## Counselling\n\nThe Counselling Service offers free and confidential appointments to enrolled students. You can have up to six sessions each year. Book through the Student Porta",
+          "score": 0.691
+        },
+        {
+          "url": "https://www.wattlebrook.example/study/apply/domestic/",
+          "title": "How to apply | Domestic students | Wattlebrook University",
+          "snippet": "[How to apply | Domestic students | Wattlebrook University]\n## Closing dates\n\n- Semester 1 2027: direct applications close on Friday 29 January 2027.\n- Semester 2 2027: direct applications close on Friday 9 July 2027.\n\nSome courses with lim",
+          "score": 0.665
+        }
+      ],
+      "tool_calls": [],
+      "searches": [
+        "Wattlebrook library open by appointment only"
+      ],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1748,
+      "output_tokens": 69,
+      "model_calls": 2,
+      "model_latency_ms": 5389,
+      "error": null,
+      "latency_s": 5.4,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q06",
+      "kind": "kb",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What phone number do I call to reach the Campus Safety Team?",
+      "answer": "I don't have this information. Please check the university's official website or contact Student Services for assistance.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 595,
+      "output_tokens": 22,
+      "model_calls": 1,
+      "model_latency_ms": 2536,
+      "error": null,
+      "latency_s": 2.54,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What phone number do I call to reach the Campus Safety Team?",
+      "answer": "I don't have this information. Please check the university's official website or contact Student Services for assistance.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 595,
+      "output_tokens": 22,
+      "model_calls": 1,
+      "model_latency_ms": 2365,
+      "error": null,
+      "latency_s": 2.37,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What phone number do I call to reach the Campus Safety Team?",
+      "answer": "I don't have this information. Please check the university's official website or contact Student Services for assistance.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 595,
+      "output_tokens": 22,
+      "model_calls": 1,
+      "model_latency_ms": 2376,
+      "error": null,
+      "latency_s": 2.38,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q07",
+      "kind": "kb",
+      "passed": false
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 (Machine Learning Foundations) are as follows:\n\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 70,
+      "model_calls": 2,
+      "model_latency_ms": 6758,
+      "error": null,
+      "latency_s": 6.87,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 (Machine Learning Foundations) are as follows:\n\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 70,
+      "model_calls": 2,
+      "model_latency_ms": 6585,
+      "error": null,
+      "latency_s": 6.67,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What are the assessments for unit DEMO2002?",
+      "answer": "The assessments for unit DEMO2002 (Machine Learning Foundations) are as follows:\n\n- Programming assignment (30%)\n- Group project (30%)\n- Final exam (40%)",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO2002"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1329,
+      "output_tokens": 70,
+      "model_calls": 2,
+      "model_latency_ms": 6089,
+      "error": null,
+      "latency_s": 6.18,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q08",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "Before you can take DEMO3003 (Generative AI Engineering), you need to have completed DEMO2002.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 5265,
+      "error": null,
+      "latency_s": 5.37,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "Before you can take DEMO3003 (Generative AI Engineering), you need to have completed DEMO2002.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 5097,
+      "error": null,
+      "latency_s": 5.18,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "What do I need to have completed before I can take DEMO3003?",
+      "answer": "Before you can take DEMO3003 (Generative AI Engineering), you need to have completed DEMO2002.",
+      "citations": [],
+      "tool_calls": [
+        {
+          "function": "get_unit_outline",
+          "parameters": {
+            "unit_code": "DEMO3003"
+          }
+        }
+      ],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 1341,
+      "output_tokens": 56,
+      "model_calls": 2,
+      "model_latency_ms": 5115,
+      "error": null,
+      "latency_s": 5.2,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q09",
+      "kind": "tool",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How much does parking cost per hour at the Riverbend campus?",
+      "answer": "I don't have information on parking costs at the Riverbend campus. You may want to contact student services for details.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 596,
+      "output_tokens": 26,
+      "model_calls": 1,
+      "model_latency_ms": 2367,
+      "error": null,
+      "latency_s": 2.37,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How much does parking cost per hour at the Riverbend campus?",
+      "answer": "I don't have information on parking costs at the Riverbend campus. You may want to contact student services for details.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 596,
+      "output_tokens": 26,
+      "model_calls": 1,
+      "model_latency_ms": 2153,
+      "error": null,
+      "latency_s": 2.15,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    },
+    {
+      "model": "local/Qwen3-14B",
+      "question": "How much does parking cost per hour at the Riverbend campus?",
+      "answer": "I don't have information on parking costs at the Riverbend campus. You may want to contact student services for details.",
+      "citations": [],
+      "tool_calls": [],
+      "searches": [],
+      "guardrail": "NONE",
+      "guardrail_policies": [],
+      "input_tokens": 596,
+      "output_tokens": 26,
+      "model_calls": 1,
+      "model_latency_ms": 2471,
+      "error": null,
+      "latency_s": 2.47,
+      "model_key": "qwen3-14b",
+      "cost_usd": null,
+      "id": "q10",
+      "kind": "abstain",
+      "passed": true
+    }
+  ]
+}

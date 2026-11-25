@@ -15,7 +15,7 @@ import statistics
 import sys
 import time
 
-from common import LOCAL, RESULTS, ROOT, ask, client, outputs
+from common import DEMO, EVAL_FILE, LOCAL, RESULTS, ROOT, ask, client, outputs
 
 
 def passed(q: dict, r: dict) -> bool:
@@ -39,7 +39,7 @@ def main() -> int:
     args = ap.parse_args()
 
     out = outputs()
-    questions = json.loads((ROOT / "data" / "eval_questions.json").read_text(encoding="utf-8"))["questions"]
+    questions = json.loads(EVAL_FILE.read_text(encoding="utf-8"))["questions"]
     cw = client("cloudwatch")
     runs = []
     for key in out["models"]:
@@ -81,7 +81,7 @@ def main() -> int:
         }
 
     RESULTS.mkdir(exist_ok=True)
-    name = "comparison_local" if LOCAL else "comparison"
+    name = ("comparison_local" if LOCAL else "comparison") + ("_demo" if DEMO else "")
     (RESULTS / f"{name}.json").write_text(json.dumps({"summary": summary, "runs": [{k: v for k, v in r.items() if k != "messages"} for r in runs]}, indent=2, default=str), encoding="utf-8")
     md = ["# Model comparison", "",
           f"{len(questions)} questions, {args.repeats} run(s) each, through the full agent loop (guardrail, knowledge base, tools).",

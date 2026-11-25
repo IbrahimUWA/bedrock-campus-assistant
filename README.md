@@ -184,6 +184,33 @@ streamlit run scripts\app.py
 deployed guardrail is applied with `ApplyGuardrail`, the API intended for models that are not hosted on Bedrock.
 `python tests\test_agent_offline.py` tests the loop with no AWS account at all.
 
+## A page set you can share: Wattlebrook University (fictional)
+
+`data/demo_site/` holds six pages written for this project about a university that does not exist. Every name, date,
+fee and phone number is invented, so the pages can be shown, recorded and redistributed. Select them with
+`CAMPUS_DATASET=demo`; the questions are in `data/eval_questions_demo.json`.
+
+```powershell
+$env:CAMPUS_BACKEND = "local"; $env:CAMPUS_DATASET = "demo"
+python scripts_compare_models.py --repeats 3            # writes results\comparison_local_demo.md
+streamlit run scriptspp.py
+```
+
+Local stand-in run on these pages ([`results/comparison_local_demo.md`](results/comparison_local_demo.md)), with the
+guardrail and Lambda tools on AWS. **Not Bedrock latency, token or cost figures.**
+
+| Model | Passed | Page questions | Tool questions | Unanswerable | Median latency (s) |
+| --- | --- | --- | --- | --- | --- |
+| Qwen3-8B | 27/30 | 18/21 | 6/6 | 3/3 | 4.33 |
+| Qwen3-14B | 24/30 | 15/21 | 6/6 | 3/3 | 6.19 |
+
+* Both models fail "When are results released after the mid-year exam period?" on every run. The page says
+  "Semester 1 2027", never "mid-year", so the search returns the wrong section and the smaller model states the
+  December date with confidence. This is a retrieval gap (query rewriting or hybrid search), not yet fixed.
+* The larger model answered the safety phone number question without searching and said it did not know.
+
+Screenshots of this version are in `docs/screenshots_demo/`.
+
 ## Licence
 
 MIT for the code. The downloaded page content remains the property of its publisher.
